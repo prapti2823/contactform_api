@@ -14,8 +14,8 @@ app.use(route);
 
 app.use('./netlify/functions/api',route)
 
-app.listen(PORT,()=>{
-    console.log(`Server is connected on port ${PORT}`)
-})
+// app.listen(PORT,()=>{
+//     console.log(`Server is connected on port ${PORT}`)
+// })
 
 module.exports.handler = serverless(app)

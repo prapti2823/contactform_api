@@ -1,8 +1,8 @@
 const express = require('express');
-const serverless= require('serverless-http');
+const serverless = require('serverless-http');
 const app = express();
 const cors = require('cors');
-const route= require('./Routers/routes');
+const route = require('./Routers/routes');
 require('./config');
 
 const PORT = 5000;
@@ -12,10 +12,17 @@ app.use(express.json())
 
 app.use(route);
 
-app.use('/.netlify/functions/api',route)
+app.use('/.netlify/functions/api', route)
 
 // app.listen(PORT,()=>{
 //     console.log(`Server is connected on port ${PORT}`)
 // })
 
 module.exports.handler = serverless(app)
+
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => {
+        console.log(`Local API running at http://localhost:${PORT}`);
+    });
+}

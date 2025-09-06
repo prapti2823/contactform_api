@@ -1,5 +1,4 @@
 const express = require('express');
-const serverless = require('serverless-http');
 const app = express();
 const cors = require('cors');
 const route = require('./Routers/routes');
@@ -17,8 +16,6 @@ app.use('/api', route)
 // app.listen(PORT,()=>{
 //     console.log(`Server is connected on port ${PORT}`)
 // })
-
-module.exports.handler = serverless(app)
 
 if (process.env.NODE_ENV !== 'production') {
     const PORT = process.env.PORT || 5000;

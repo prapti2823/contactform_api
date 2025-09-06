@@ -12,7 +12,7 @@ app.use(express.json())
 
 // app.use(route);
 
-app.use('/api', route)
+app.use('/', route)
 
 // app.listen(PORT,()=>{
 //     console.log(`Server is connected on port ${PORT}`)

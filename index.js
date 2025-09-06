@@ -10,7 +10,7 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json())
 
-app.use(route);
+// app.use(route);
 
 app.use('/.netlify/functions/api', route)
 

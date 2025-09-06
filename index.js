@@ -12,7 +12,7 @@ app.use(express.json())
 
 app.use(route);
 
-app.use('./netlify/functions/api',route)
+app.use('/.netlify/functions/api',route)
 
 // app.listen(PORT,()=>{
 //     console.log(`Server is connected on port ${PORT}`)

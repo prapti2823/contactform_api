@@ -6,7 +6,7 @@ route.get('/',function (req,res){
     res.send("Welcome")
 })
 
-route.get('/api/get-contact',getContacts)
-route.post('/api/add-contact', postContacts )
+route.get('/get-contact',getContacts)
+route.post('/add-contact', postContacts )
 
 module.exports = route;

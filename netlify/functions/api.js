@@ -2,8 +2,8 @@ const express = require('express');
 const serverless = require('serverless-http');
 const app = express();
 const cors = require('cors');
-const route = require('./Routers/routes');
-require('./config');
+const route = require('../../Routers/routes');
+require('../../config');
 
 const PORT = 5000;
 
@@ -19,10 +19,3 @@ app.use('/api', route)
 // })
 
 module.exports.handler = serverless(app)
-
-if (process.env.NODE_ENV !== 'production') {
-    const PORT = process.env.PORT || 5000;
-    app.listen(PORT, () => {
-        console.log(`Local API running at http://localhost:${PORT}`);
-    });
-}

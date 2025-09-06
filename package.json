@@ -2,11 +2,11 @@
   "name": "portfolio_contacts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": ".netlify/functions/api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node .netlify/functions/api.js",
+    "dev": "nodemon .netlify/functions/api.js",
     "build": "netlify deploy --prod"
   },
   "keywords": [],

@@ -1,15 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "api/index.js": {
-      "includeFiles": [
-        "Routers/**",
-        "Controllers/**",
-        "Models/**",
-        "config.js"
-      ]
-    }
-  },
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/index.js" },
     { "src": "/(.*)", "dest": "/api/index.js" }

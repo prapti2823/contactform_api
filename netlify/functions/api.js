@@ -10,6 +10,11 @@ app.use(express.json())
 
 // app.use(route);
 
+app.get("/test", (req, res) => {
+    res.json({ message: "Test route working ✅" });
+});
+
+// mount your main routes
 app.use('/', route)
 
 // app.listen(PORT,()=>{

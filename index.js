@@ -23,3 +23,5 @@ app.use('/', route)
 //         console.log(`Local API running at http://localhost:${PORT}`);
 //     });
 // }
+
+module.exports = app;

@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-const data = mongoose.connect("mongodb+srv://praptishah2823:praptishah2823_U!@portfoliocontact.wp0gsg0.mongodb.net/",{
+const data = mongoose.connect(process.env.MONDODB_CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
-    console.log("Connected");
+    console.log("Database connected successfully");
 }).catch((error) => {
-    console.log('Error in connecting the database: ', error)
-})
+    console.log('Error in connecting the database: ', error);
+});
 
 module.exports = data;

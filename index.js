@@ -22,6 +22,6 @@ app.get('/', (req, res) => {
     res.send('Contact Form API is running!');
 });
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

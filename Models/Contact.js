@@ -15,7 +15,15 @@ const contactSchema = new mongoose.Schema({
         },
         message: {
             type: String,
-        }
+        },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+    isRead: {
+        type: Boolean,
+        default: false
+    }
 });
 
 const contactDetails = mongoose.model("contact",contactSchema)

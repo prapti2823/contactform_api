@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const route = require('./Routers/routes');
+require('dotenv').config();
 require('./config');
 
 const PORT = process.env.PORT || 5000;
@@ -18,7 +19,7 @@ app.get('/test', (req, res) => {
 app.use('/api', route);
 
 // Root route
-app.get('/', (req, res) => {
+app.get('/', (req, res) => { 
     res.send('Contact Form API is running!');
 });
 
